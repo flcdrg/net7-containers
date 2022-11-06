@@ -29,7 +29,7 @@ jobs:
       uses: azure/docker-login@v1
       with:
         login-server: crnet7containersaustraliaeast.azurecr.io
-        username: flcdrg
+        username: crnet7containersaustraliaeast
         password: ${{ secrets.ACR_PAT }}
 
     - name: Publish
