@@ -28,9 +28,9 @@ jobs:
     - name: Log in to container registry
       uses: azure/docker-login@v1
       with:
-        login-server: ghcr.io
+        login-server: crnet7containersaustraliaeast.azurecr.io
         username: flcdrg
-        password: ${{ secrets.GITHUB_TOKEN }}
+        password: ${{ secrets.ACR_PAT }}
 
     - name: Publish
-      run: dotnet publish --os linux --arch x64 -p:PublishProfile=github
+      run: dotnet publish --os linux --arch x64 -p:PublishProfile=azure
