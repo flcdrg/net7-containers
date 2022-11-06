@@ -25,3 +25,12 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
 
+    - name: Log in to container registry
+      uses: azure/docker-login@v1
+      with:
+        login-server: ghcr.io
+        username: flcdrg
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Publish
+      run: dotnet publish --os linux --arch x64 -p:PublishProfile=github /t:PublishContainer
