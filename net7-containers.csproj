@@ -7,8 +7,4 @@
     <RootNamespace>net7_containers</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Build.Containers" Version="7.0.307" />
-  </ItemGroup>
-
 </Project>
