@@ -26,7 +26,7 @@ jobs:
       run: dotnet build --no-restore
 
     - name: Log in to container registry
-      uses: azure/docker-login@v1
+      uses: azure/docker-login@v2
       with:
         login-server: crnet7containersaustraliaeast.azurecr.io
         username: crnet7containersaustraliaeast
